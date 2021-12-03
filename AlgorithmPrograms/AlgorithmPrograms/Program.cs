@@ -11,7 +11,7 @@ namespace AlgorithmPrograms
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Enter your Choice Number to Execute the Program Press- 1-Bubble Sort,2-Binary search,3-Exit");
+                Console.WriteLine("Enter your Choice Number to Execute the Program Press- 1-Bubble Sort,2-Binary search,3-Insertion sort,4-Exit");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -25,9 +25,14 @@ namespace AlgorithmPrograms
                         int[] arr2 = { 2,7,10,23,45,67 };
                       int result= search.BinarySearching(arr2,0,5,45);
                         Console.WriteLine(result);
-                       
-                        break;
+                       break;
                     case 3:
+                        int[] arr = { 27, 11, 13, 5, 6 };
+                        InsertionSort ob = new InsertionSort();
+                        ob.sort(arr);
+                       ob.PrintArray(arr);
+                        break;
+                    case 4:
                         flag = false;
                         break;
                 }
